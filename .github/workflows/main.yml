@@ -1,8 +1,9 @@
-name: ci
 on: [ pull_request ]
-jobs: 
-  build:
-    steps: 
+jobs:
+  new_push_job:
+    runs-on: ubuntu-latest
+    name: New push to repo
+    steps:
       - name: Send custom JSON data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
